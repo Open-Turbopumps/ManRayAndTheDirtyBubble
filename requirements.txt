@@ -1,0 +1,7 @@
+coolprop
+numpy
+scipy
+handcalcs
+matplotlib
+cantera
+pandas
