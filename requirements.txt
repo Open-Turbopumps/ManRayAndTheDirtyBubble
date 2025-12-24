@@ -5,3 +5,4 @@ handcalcs
 matplotlib
 cantera
 pandas
+ross-rotordynamics
