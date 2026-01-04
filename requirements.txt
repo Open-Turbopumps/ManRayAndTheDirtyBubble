@@ -6,3 +6,4 @@ matplotlib
 cantera
 pandas
 ross-rotordynamics
+ipykernal
