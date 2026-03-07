@@ -6,3 +6,6 @@ matplotlib
 cantera
 pandas
 ross-rotordynamics
+rocketcea
+gmsh
+pygmsh

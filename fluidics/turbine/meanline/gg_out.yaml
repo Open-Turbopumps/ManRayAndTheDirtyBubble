@@ -1,0 +1,41 @@
+# Yaml File Generated from Gas Generator Sizing Script
+
+gas_generator:
+
+  # High level Sized Geometry of the gas-generator
+  geometry:
+
+    injector:
+      
+      fuel:
+        name: "IPA"
+        stiffness: 1.0
+        CdA_fu: 8.929216317561217e-07
+        A_fu: 2.232304079390304e-06
+
+      oxidiser:
+        name: "Nitrous"
+        stiffness: 1.0
+        CdA_ox: 8.914471692165566e-07
+        A_ox: 1.7828943384331133e-06
+
+    chamber:
+
+      A_cc: 4.45357383e-05
+
+  # Operating point sized for
+  operating_point:
+
+    MR: 1.0
+
+    m_dot:
+      oxidiser: 0.055977
+      fuel: 0.055977
+      total: 0.111954
+
+    gas:
+      T: 868.1694130102591
+      P: 25.0e+5
+      Cp: 2242.4288383607086
+      gamma: 1.290332008352664
+      R: 504
