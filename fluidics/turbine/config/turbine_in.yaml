@@ -1,0 +1,18 @@
+# Turbine Input File for the Mean-Line Design
+
+turbine_stage:
+
+  stator: 
+    Rt: 23                # Expansion Ratio Across Stator Stage
+    phi_n: 0.85           # Nozzle Effective Exit Velocity Coefficient (u_acual / u_ideal)
+    alpha: 70             # Nozzle Absolute Exit Angle, relative to the axis of flow
+    N_nozzle: 6           # Number of Nozzles in the Stator
+
+  
+  rotor:
+    N_shaft: 24.0e+3       # Shaft Speed for the rotor (RPM)
+    u_cis: 0.08            # Blade speed to isentropic inlet velocity factor (u / c_is)
+    delta_r: 2.0e-3       # Blade Tip Gap (mm)
+    N_rotor: 35           # Number of rotor blades
+
+  power: 24.0e+3             # Power to be produced by the turbine
