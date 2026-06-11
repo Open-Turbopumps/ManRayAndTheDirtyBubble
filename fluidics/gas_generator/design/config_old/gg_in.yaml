@@ -1,0 +1,45 @@
+# YAML File defining the high level gas-generator sizing elements:
+
+gas_generator:
+
+  chamber:
+    
+    p_cc: 25.0e+5          # Chamber Pressure [ Pa ]
+    MR: 0.5               # Design Mixture Ratio [ N.D. ]
+    m_dot_t: 0.1237393     # Total mass-flow rate from the gas-generator [ kg/s ]
+    eta_c: 0.95
+    ctr_file: "config/n2o_ipa.yaml"
+
+  injector:
+
+    fuel:
+      
+      name: "IPA"                   # User specified name of the Fuel
+      ctr_alias: "C3H8O,2propanol"  # Cantera Alias for the fuel
+
+      cd: 0.6                       # Injector Discharge Coefficient [ N.D. ]
+      N: 4                          # Number of fuel injector holes
+      inj_model: "SPI"   # Ideal Incompressible Liquid is used for injection modelling
+
+      fluid_model: "IncompressibleFluid"   # We will manually define the relevant fluid parameters
+
+      inlet_params:
+        p: 50.0e+5                     # Injector Inlet Pressure [ Pa ]
+        t: 295                        # Injector Inlet Temperature [ K ]
+        rho: 786                    # Inlet Density of the IPA [ kg/m^3 ]
+
+
+    oxidiser:
+
+      name: "NitrousOxide"         # User specified name of the oxidiser
+      ctr_alias: "N2O"          # Cantera Alias for the oxidiser
+
+      cd: 0.3                       # Injector Discharger Coefficient [ N.D. ]
+      N: 1                          # Number of oxidiser injector holes.
+      inj_model: "NHEM"     # Ideal Incompressible Liquid is used for injection modelling
+
+      fluid_model: "CoolProp"       # We will derive the fluid properties via `coolprop`
+
+      inlet_params:
+        p: 50.0e+5                     # Injector Inlet Pressure [ Pa ]
+        t: 273                        # Injector Inlet Temperature [ K ]
