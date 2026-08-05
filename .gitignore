@@ -1,4 +1,4 @@
 # Created by venv; see https://docs.python.org/3/library/venv.html
-*
+*.ipynb_checkpoints
 *.mp4
 *.h5
